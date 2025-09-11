@@ -1,0 +1,20 @@
+{
+  "name": "eslint-plugin-yaheader",
+  "version": "0.1.0",
+  "description": "Yet Another HEADER eslint plugin",
+  "main": "lib/yaheader.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "plugin",
+    "header",
+    "license"
+  ],
+  "author": "Trent Mick <trentm@gmail.com>",
+  "license": "MIT"
+}
