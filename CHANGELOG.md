@@ -1,4 +1,4 @@
-# eslint-plugin-yaheader Changelog
+# eslint-plugin-yet-another-license-header Changelog
 
 ## Unreleased
 
