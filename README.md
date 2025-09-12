@@ -3,6 +3,12 @@
 This repo contains **yet another** eslint plugin for handling a **license
 header** comment at the top of your JavaScript/TypeScript files.
 
+It includes a single rule, `header`, that will (a) report an issue if the
+top comment block in a checked file does not match the configured header
+string (or the allowed patterns) and (b) can fix (with `eslint --fix`) the
+issue by updating or adding a top comment block.
+
+
 # Why?
 
 - There is [eslint-plugin-header](https://github.com/Stuk/eslint-plugin-header). AFAIK, this plugin [does not support eslint@9](https://github.com/open-telemetry/opentelemetry-js-contrib/pull/3001#discussion_r2338202665). It can also [accidentally blow away a top-comment](https://github.com/open-telemetry/opentelemetry-js-contrib/issues/2967).
@@ -33,6 +39,13 @@ to match that for eslint@9.
     import {defineConfig} from 'eslint/config';
     import headerPlugin from 'eslint-plugin-yet-another-license-header';
 
+    const header = `
+    /*
+     * Copyright Trent Mick
+     * SPDX-License-Identifier: Apache-2.0
+     */
+    `;
+
     export default defineConfig([
         {
             plugins: {
@@ -42,12 +55,7 @@ to match that for eslint@9.
                 'yet-another-license-header/header': [
                     'error',
                     {
-                        header: `
-    /*
-     * Copyright Trent Mick
-     * SPDX-License-Identifier: Apache-2.0
-     */
-    `,
+                        header,
                         // Or use `headerFile` to point to the header content.
                         //      headerFile: './etc/header.txt',
 
@@ -78,4 +86,34 @@ to match that for eslint@9.
 
 # Configuration
 
-TODO: describe the options
+The `header` rule is configured with a single object with the following
+properties:
+
+### `header` (string)
+
+A string that is the default license header comment to check/add to the top
+of JS/TS files.  Leading and trailing whitespace is removed.
+
+One of `header` or `headerFile` must be specified.
+
+### `headerFile` (string)
+
+A path to a file that contains the default license header comment.
+Leading and trailing whitespace is removed.
+
+One of `header` or `headerFile` must be specified.
+
+## `allowedHeaderPatterns` (Array<RegExp|String>)
+
+An optional array of allowed header patterns when checking if the lead comment
+block of a JS/TS file is acceptable. Note that the string from `header` (or
+`headerFile`) is always also used when checking an existing lead comment block.
+Elements of this array can be a string (checks for an exact match) or a RegExp
+(tests via `regexp.test(leadCommentBlock)`).
+
+> [!WARNING]
+> If you use `allowedHeaderPatterns` to support some variance on a default
+> license header and something changes so that a file's header does not match,
+> then `eslint --fix` will **replace it** with the string from `header` (or
+> `headerFile`). This means it may delete some content you had intended to
+> include in the license header block.
