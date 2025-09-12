@@ -17,7 +17,7 @@ const allowedHeaderPatterns = [
  * SPDX-License-Identifier: MIT
  */
 `,
-    /\/\*\n \* Copyright Lisa(, .+)*\n \* SPDX-License-Identifier: MIT\n \*\//
+    /\/\*\n \* Copyright Lisa(, .+)*\n \* SPDX-License-Identifier: MIT\n \*\//,
 ];
 
 const ruleTester = new RuleTester();
@@ -162,6 +162,5 @@ ruleTester.run('header', rule, {
             output: '/*\n * Copyright Lisa\n * SPDX-License-Identifier: MIT\n */\n\nconsole.log("hi");',
             errors: [{messageId: 'incorrectHeader'}],
         },
-
     ],
 });
