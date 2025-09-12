@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+'use strict';
+
 const {name, version} = require('./package.json');
 
 module.exports = {

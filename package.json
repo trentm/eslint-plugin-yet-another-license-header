@@ -20,7 +20,8 @@
     },
     "scripts": {
         "lint": "eslint && prettier --check .",
-        "lint:fix": "eslint --fix && prettier --write ."
+        "lint:fix": "eslint --fix && prettier --write .",
+        "test": "mocha 'test/**.test.js'"
     },
     "keywords": [
         "eslint",
@@ -42,6 +43,7 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-eslint-plugin": "^7.0.0",
         "globals": "^14.0.0",
+        "mocha": "^11.7.2",
         "prettier": "^3.6.2"
     }
 }
