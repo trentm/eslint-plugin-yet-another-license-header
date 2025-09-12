@@ -24,13 +24,19 @@ ruleTester.run('header', rule, {
 
         // Line-style comment block works.
         {
-            options: [{header: '// Copyright Lisa\n// SPDX-License-Identifier: MIT'}],
+            options: [
+                {header: '// Copyright Lisa\n// SPDX-License-Identifier: MIT'},
+            ],
             code: '// Copyright Lisa\n// SPDX-License-Identifier: MIT\n\nconsole.log("hi");',
         },
 
         // CRLF line endings
         {
-            options: [{header: '/* Copyright Lisa\n * SPDX-License-Identifier: MIT\n */'}],
+            options: [
+                {
+                    header: '/* Copyright Lisa\n * SPDX-License-Identifier: MIT\n */',
+                },
+            ],
             code: '/* Copyright Lisa\r\n * SPDX-License-Identifier: MIT\r\n */\r\n\r\nconsole.log("hi");',
         },
     ],
@@ -63,7 +69,9 @@ ruleTester.run('header', rule, {
 
         // Line-style comment block works.
         {
-            options: [{header: '// Copyright Lisa\n// SPDX-License-Identifier: MIT'}],
+            options: [
+                {header: '// Copyright Lisa\n// SPDX-License-Identifier: MIT'},
+            ],
             code: '// Copyright Lisa\n// SPDX-License-Identifier: WTFPL\n\nconsole.log("hi");',
             output: '// Copyright Lisa\n// SPDX-License-Identifier: MIT\n\nconsole.log("hi");',
             errors: [{messageId: 'incorrectHeader'}],
@@ -71,7 +79,11 @@ ruleTester.run('header', rule, {
 
         // CRLF line endings
         {
-            options: [{header: '/* Copyright Lisa\n * SPDX-License-Identifier: MIT\n */'}],
+            options: [
+                {
+                    header: '/* Copyright Lisa\n * SPDX-License-Identifier: MIT\n */',
+                },
+            ],
             code: 'console.log("hi");\r\nconsole.log("bye");\r\n',
             output: '/* Copyright Lisa\r\n * SPDX-License-Identifier: MIT\r\n */\r\n\r\nconsole.log("hi");\r\nconsole.log("bye");\r\n',
             errors: [{messageId: 'missingHeader'}],
