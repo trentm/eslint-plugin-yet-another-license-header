@@ -8,7 +8,6 @@ top comment block in a checked file does not match the configured header
 string (or the allowed patterns) and (b) can fix (with `eslint --fix`) the
 issue by updating or adding a top comment block.
 
-
 # Why?
 
 - There is [eslint-plugin-header](https://github.com/Stuk/eslint-plugin-header). AFAIK, this plugin [does not support eslint@9](https://github.com/open-telemetry/opentelemetry-js-contrib/pull/3001#discussion_r2338202665). It can also [accidentally blow away a top-comment](https://github.com/open-telemetry/opentelemetry-js-contrib/issues/2967).
@@ -92,7 +91,7 @@ properties:
 ### `header` (string)
 
 A string that is the default license header comment to check/add to the top
-of JS/TS files.  Leading and trailing whitespace is removed.
+of JS/TS files. Leading and trailing whitespace is removed.
 
 One of `header` or `headerFile` must be specified.
 
