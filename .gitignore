@@ -6,3 +6,5 @@ dist
 .env
 npm-debug.log*
 .DS_Store
+/*.tgz
+TODO.md
