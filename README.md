@@ -102,7 +102,7 @@ Leading and trailing whitespace is removed.
 
 One of `header` or `headerFile` must be specified.
 
-## `allowedHeaderPatterns` (Array<RegExp|String>)
+### `allowedHeaderPatterns` (Array<RegExp|String>)
 
 An optional array of allowed header patterns when checking if the lead comment
 block of a JS/TS file is acceptable. Note that the string from `header` (or
