@@ -2,6 +2,10 @@
     "name": "eslint-plugin-yet-another-license-header",
     "version": "0.1.0",
     "description": "Yet another ESLint plugin to handle a license top-comment in your JS/TS files",
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
     "type": "commonjs",
     "main": "index.js",
     "directories": {
