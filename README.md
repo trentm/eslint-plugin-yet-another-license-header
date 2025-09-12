@@ -17,7 +17,7 @@ Currently this is written to support eslint@9.
 As well, the node versions supported (see package.json#engines) are selected
 to match that for eslint@9.
 
-<small>(I'm open to supporting earlier node versions and earlier eslint versions.)</small>
+<sub>(I'm open to supporting earlier node versions and earlier eslint versions.)</sub>
 
 # Usage
 
