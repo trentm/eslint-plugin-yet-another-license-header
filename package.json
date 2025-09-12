@@ -6,6 +6,14 @@
   "directories": {
     "lib": "lib"
   },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "package.json",
+    "index.js",
+    "lib"
+  ],
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
