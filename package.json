@@ -18,7 +18,7 @@
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint"
   },
   "keywords": [
     "eslint",
@@ -32,5 +32,10 @@
     "type": "git",
     "url": "git://github.com/trentm/eslint-plugin-yet-another-license-header.git"
   },
-  "homepage": "https://github.com/trentm/eslint-plugin-yet-another-license-header#readme"
+  "homepage": "https://github.com/trentm/eslint-plugin-yet-another-license-header#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "globals": "^14.0.0"
+  }
 }
