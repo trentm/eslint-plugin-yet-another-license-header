@@ -107,8 +107,8 @@ One of `header` or `headerFile` must be specified.
 An optional array of allowed header patterns when checking if the lead comment
 block of a JS/TS file is acceptable. Note that the string from `header` (or
 `headerFile`) is always also used when checking an existing lead comment block.
-Elements of this array can be a string (checks for an exact match) or a RegExp
-(tests via `regexp.test(leadCommentBlock)`).
+Elements of this array can be a string (checks for an exact match, after
+trimming) or a RegExp (tests via `regexp.test(leadCommentBlock)`).
 
 > [!WARNING]
 > If you use `allowedHeaderPatterns` to support some variance on a default
