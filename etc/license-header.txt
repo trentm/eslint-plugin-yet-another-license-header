@@ -1,0 +1,4 @@
+/*
+ * Copyright Trent Mick
+ * SPDX-License-Identifier: Apache-2.0
+ */
