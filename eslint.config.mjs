@@ -11,6 +11,7 @@ import {defineConfig} from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import headerPlugin from './index.js';
 
+// https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-files
 const gitignore = fileURLToPath(new URL('.gitignore', import.meta.url));
 
 export default defineConfig([
