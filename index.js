@@ -13,5 +13,5 @@ module.exports = {
     },
     rules: {
         header: require('./lib/header-rule'),
-    }
-}
+    },
+};

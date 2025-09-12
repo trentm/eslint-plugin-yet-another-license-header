@@ -1,44 +1,45 @@
 {
-  "name": "eslint-plugin-yet-another-license-header",
-  "version": "0.1.0",
-  "description": "Yet another ESLint plugin to handle a license top-comment in your JS/TS files",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "files": [
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md",
-    "package.json",
-    "index.js",
-    "lib"
-  ],
-  "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-  },
-  "scripts": {
-    "lint": "eslint",
-    "style": "prettier"
-  },
-  "keywords": [
-    "eslint",
-    "plugin",
-    "header",
-    "license"
-  ],
-  "author": "Trent Mick <trentm@gmail.com>",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/trentm/eslint-plugin-yet-another-license-header.git"
-  },
-  "homepage": "https://github.com/trentm/eslint-plugin-yet-another-license-header#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.35.0",
-    "eslint": "^9.35.0",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^14.0.0",
-    "prettier": "^3.6.2"
-  }
+    "name": "eslint-plugin-yet-another-license-header",
+    "version": "0.1.0",
+    "description": "Yet another ESLint plugin to handle a license top-comment in your JS/TS files",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "README.md",
+        "LICENSE",
+        "CHANGELOG.md",
+        "package.json",
+        "index.js",
+        "lib"
+    ],
+    "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    },
+    "scripts": {
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "style": "prettier --write ."
+    },
+    "keywords": [
+        "eslint",
+        "plugin",
+        "header",
+        "license"
+    ],
+    "author": "Trent Mick <trentm@gmail.com>",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/trentm/eslint-plugin-yet-another-license-header.git"
+    },
+    "homepage": "https://github.com/trentm/eslint-plugin-yet-another-license-header#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.35.0",
+        "eslint": "^9.35.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^14.0.0",
+        "prettier": "^3.6.2"
+    }
 }
