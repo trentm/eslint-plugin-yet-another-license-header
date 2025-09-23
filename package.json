@@ -1,6 +1,6 @@
 {
     "name": "eslint-plugin-yet-another-license-header",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Yet another ESLint plugin to handle a license top-comment in your JS/TS files",
     "publishConfig": {
         "access": "public",
@@ -23,6 +23,7 @@
         "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
     },
     "scripts": {
+        "prepush": "npm run lint && npm run test",
         "lint": "eslint && prettier --check .",
         "lint:fix": "eslint --fix && prettier --write .",
         "test": "mocha 'test/**.test.js'"

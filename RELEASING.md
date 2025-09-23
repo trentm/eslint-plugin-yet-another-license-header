@@ -11,3 +11,5 @@ For example, assuming version `1.2.3`:
     git tag v1.2.3
     git push origin v1.2.3
     ```
+    Then the release workflow (https://github.com/trentm/eslint-plugin-yet-another-license-header/actions/workflows/release.yml)
+    should handle the release.

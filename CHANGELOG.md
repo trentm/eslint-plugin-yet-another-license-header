@@ -1,8 +1,12 @@
 # eslint-plugin-yet-another-license-header Changelog
 
-## Unreleased
+## v0.2.0
 
-- Fix: trim string entries in `allowedHeaderPatterns` before comparison.
+- fix: Trim string entries in `allowedHeaderPatterns` before comparison.
+
+- release process: Switch to "trusted publishing"
+  (https://docs.npmjs.com/trusted-publishers), i.e. a trust relation has been
+  setup between this package on npm and the release.yml workflow in this repo.
 
 ## v0.1.0
 
