@@ -24,6 +24,8 @@
     },
     "scripts": {
         "prepush": "npm run lint && npm run test",
+        "check:zizmor": "zizmor --gh-token $(gh auth token) .github/workflows",
+        "check:zizmor:fix": "zizmor --gh-token $(gh auth token) --fix=all .github/workflows",
         "lint": "eslint && prettier --check .",
         "lint:fix": "eslint --fix && prettier --write .",
         "test": "mocha 'test/**.test.js'"
