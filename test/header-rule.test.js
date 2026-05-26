@@ -34,6 +34,17 @@ ruleTester.run('header', rule, {
             code: '#!/usr/bin/env node\n/* Copyright Lisa */\n\nconsole.log("hi");',
         },
 
+        {
+            name: 'just lic comment, no code',
+            options: [{header: '/* Copyright Lisa */'}],
+            code: '/* Copyright Lisa */\n',
+        },
+        {
+            name: 'just shebang and lic comment, no code',
+            options: [{header: '/* Copyright Lisa */'}],
+            code: '#!/usr/bin/env node\n/* Copyright Lisa */',
+        },
+
         // Line-style comment block works.
         {
             name: 'line-style comment block',
