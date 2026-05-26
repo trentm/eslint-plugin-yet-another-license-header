@@ -1,6 +1,6 @@
 # eslint-plugin-yet-another-license-header Changelog
 
-## Unreleased
+## v1.0.0
 
 - eslint v10 support
 - fix: A file whose only content is the license header, i.e. there is no
