@@ -119,6 +119,21 @@ ruleTester.run('header', rule, {
             errors: [{messageId: 'incorrectHeader'}],
         },
 
+        {
+            name: 'just lic content, no code',
+            options: [{header: '/* Copyright Lisa */'}],
+            code: '/* Copyright Bart */',
+            output: '/* Copyright Lisa */',
+            errors: [{messageId: 'incorrectHeader'}],
+        },
+        {
+            name: 'just shebang and lic comment, no code',
+            options: [{header: '/* Copyright Lisa */'}],
+            code: '#!/usr/bin/env node\n/* Copyright Bart */',
+            output: '#!/usr/bin/env node\n/* Copyright Lisa */',
+            errors: [{messageId: 'incorrectHeader'}],
+        },
+
         // Doesn't blow away a top-comment, as long as the comment doesn't
         // include "Copyright", "SPDX-License-Identifier", etc. See `LIC_RE`.
         {

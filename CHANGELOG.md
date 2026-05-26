@@ -3,6 +3,9 @@
 ## Unreleased
 
 - eslint v10 support
+- fix: A file whose only content is the license header, i.e. there is no
+  program code, was not handled properly.
+  https://github.com/trentm/eslint-plugin-yet-another-license-header/issues/13
 
 ## v0.2.0
 
