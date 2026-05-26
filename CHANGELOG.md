@@ -1,5 +1,9 @@
 # eslint-plugin-yet-another-license-header Changelog
 
+## Unreleased
+
+- eslint v10 support
+
 ## v0.2.0
 
 - fix: Trim string entries in `allowedHeaderPatterns` before comparison.
