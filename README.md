@@ -18,11 +18,8 @@ plugins are better battle-tested.
 
 # Compatibility
 
-Currently this is written to support eslint@9.
-As well, the node versions supported (see package.json#engines) are selected
-to match that for eslint@9.
-
-<sub>(I'm open to supporting earlier node versions and earlier eslint versions.)</sub>
+Currently this is written to support eslint@9 and eslint@10 (see ".tav.yml", "tav" means "test-all-versions").
+The node versions supported (see package.json#engines) are selected to match that for eslint@9.
 
 # Usage
 
