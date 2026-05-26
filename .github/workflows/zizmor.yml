@@ -1,7 +1,7 @@
 # Zizmor can be run locally:
-#   zizmor --gh-token $(gh auth token) .github/workflows
+#   zizmor --gh-token $(gh auth token) .
 # Sometimes there are automatic fixes to findings:
-#   zizmor --gh-token $(gh auth token) --fix=all .github/workflows
+#   zizmor --gh-token $(gh auth token) --fix=all .
 name: Zizmor GitHub Actions Security Analysis
 
 on:
